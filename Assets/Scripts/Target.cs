@@ -1,0 +1,28 @@
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+ 
+public class Target : MonoBehaviour
+{
+    public Score scoreManager;
+
+    void Start()
+    {
+        //Set the tag of this GameObject to Player
+        gameObject.tag = "Player";
+    }
+ 
+    //this method is called whenever a collision is detected
+    private void OnCollisionEnter(Collision collision) {
+        //on collision adding point to the score
+        if(collision.tag=="Player"){
+            scoreManager.AddPoint();
+ 
+        // printing if collision is detected on the console
+        Debug.Log("Collision Detected");
+        //after collision is detected destroy the gameobject
+        Destroy(gameObject);
+        }
+        
+    }
+}
