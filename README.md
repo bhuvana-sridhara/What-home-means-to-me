@@ -4,7 +4,7 @@ A simple Ball Throwing-like game using Unity3D, while following the "What home m
 
 I have modeled the game after my house in India. My family and friends are represented by other bb8s who are feeling blue. The blue target disappears once the player shoots them with hearts. The player wins once all 5 of the targets are destroyed.
 
-Link to demo of the gane: https://drive.google.com/file/d/18B93zEDDwjtRETb5wAofb7rj8E_YcsFA/view?usp=sharing
+Link to demo of the game: https://drive.google.com/file/d/18B93zEDDwjtRETb5wAofb7rj8E_YcsFA/view?usp=sharing
 
 ### References:
 
