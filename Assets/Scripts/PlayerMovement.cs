@@ -4,15 +4,18 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+
 // MonoBehavior is the base class from which every Unity Script Derives
 public class PlayerMovement : MonoBehaviour
 {
+
     public float speed = 15.0f;
     public float rotationSpeed = 50;
     public float force = 700f;
 
     public GameObject cannon;
     public GameObject bullet;
+    public AudioSource HeartSound;
 
     Rigidbody rb;
     Transform t;
@@ -45,6 +48,7 @@ public class PlayerMovement : MonoBehaviour
 
         // https://docs.unity3d.com/ScriptReference/Input.html
         if (Input.GetButtonDown("Fire1")){
+        	HeartSound.Play();
             GameObject newBullet = GameObject.Instantiate(bullet, cannon.transform.position, cannon.transform.rotation) as GameObject;
             newBullet.GetComponent<Rigidbody>().velocity += Vector3.up * 2;
             newBullet.GetComponent<Rigidbody>().AddForce(newBullet.transform.forward * 500);

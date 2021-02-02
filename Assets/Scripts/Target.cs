@@ -5,6 +5,7 @@ using UnityEngine;
 public class Target : MonoBehaviour
 {
     public Score scoreManager;
+   
 
     void Start()
     {
@@ -15,7 +16,8 @@ public class Target : MonoBehaviour
     //this method is called whenever a collision is detected
     private void OnCollisionEnter(Collision collision) {
         //on collision adding point to the score
-        if(collision.tag=="Player"){
+        if(collision.gameObject.CompareTag("Player")) {
+           
             scoreManager.AddPoint();
  
         // printing if collision is detected on the console

@@ -1,10 +1,14 @@
 using UnityEngine;
 using UnityEngine.UI;
+using System.Collections;
+using System.Collections.Generic;
  
 public class Score : MonoBehaviour
 {
     public Text scoreText;
-    public int maxScore = 5;
+    public int maxScore = 6;
+    public AudioSource CollisionSound;
+    public AudioSource EndSound;
  
     int score;
  
@@ -13,6 +17,8 @@ public class Score : MonoBehaviour
     {
         score = 0;
         scoreText.text = "Score: " + score;
+        // CollisionSound = GetComponent<AudioSource>();
+        // EndSound = GetComponent<AudioSource>();
        
     }
     
@@ -21,11 +27,14 @@ public class Score : MonoBehaviour
     public void AddPoint()
     {
              score++;
+            CollisionSound.Play();
  
         if (score != maxScore)
             scoreText.text = "Score: " + score;
-        else
+        else{
+            EndSound.Play();
             scoreText.text = "You won!";
+        }
         }
     
 }
