@@ -6,6 +6,9 @@ I have modeled the game after my house in India. My family and friends are repre
 
 Link to demo of the game: https://drive.google.com/file/d/18B93zEDDwjtRETb5wAofb7rj8E_YcsFA/view?usp=sharing
 
+## Piazza feedback given to:
+Juan Camacho, Nishant Chudasama
+
 ### References:
 
 Background music: (forest-birds-singing-in-windy-morning)
